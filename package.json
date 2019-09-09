@@ -1,4 +1,14 @@
 {
+  "name": "react_udemy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:m11o/react_udemy.git",
+  "author": "m11o <velonica2227@icloud.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "lint": "./node_modules/.bin/eslint ./src"
+  },
   "dependencies": {
     "axios": "0.16.2",
     "babel-core": "6.25.0",
@@ -15,7 +25,7 @@
     "geolib": "2.0.22",
     "import-glob-loader": "1.1.0",
     "lodash": "4.17.4",
-    "node-sass": "4.5.3",
+    "node-sass": "^4.12.0",
     "prop-types": "15.5.10",
     "query-string": "5.0.0",
     "react": "15.6.1",
@@ -31,11 +41,5 @@
     "style-loader": "0.18.2",
     "webpack": "3.3.0",
     "webpack-dev-server": "2.5.1"
-  },
-  "name": "react_udemy",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:m11o/react_udemy.git",
-  "author": "m11o <velonica2227@icloud.com>",
-  "license": "MIT"
+  }
 }
