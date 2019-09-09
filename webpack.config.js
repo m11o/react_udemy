@@ -1,19 +1,20 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const publidDir = path.join(__dirname, '/public');
+const publicDir = path.join(__dirname, '/public');
 module.exports = [
   {
     entry: [
-      './src/index.js',
+      './src/index.jsx',
     ],
     output: {
-      path: publidDir,
+      path: publicDir,
       publicPath: '/',
       filename: 'bundle.js',
     },
     module: {
       loaders: [{
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
@@ -26,7 +27,7 @@ module.exports = [
     },
     devServer: {
       historyApiFallback: true,
-      contentBase: publidDir,
+      contentBase: publicDir,
     },
   },
   {
@@ -34,7 +35,7 @@ module.exports = [
       style: './stylesheets/index.scss',
     },
     output: {
-      path: publidDir,
+      path: publicDir,
       publicPath: '/',
       filename: 'bundle.css',
     },
