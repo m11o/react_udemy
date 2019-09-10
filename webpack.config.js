@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const publicDir = path.join(__dirname, '/public');
 module.exports = [
@@ -29,6 +30,9 @@ module.exports = [
       historyApiFallback: true,
       contentBase: publicDir,
     },
+    plugins: [
+      new Dotenv({ path: './.env' }),
+    ],
   },
   {
     entry: {
@@ -53,6 +57,7 @@ module.exports = [
     },
     plugins: [
       new ExtractTextPlugin('bundle.css'),
+      new Dotenv({ path: './.env' }),
     ],
   },
 ];
